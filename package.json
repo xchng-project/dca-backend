@@ -1,7 +1,7 @@
 {
-  "name": "dca-app",
+  "name": "dca-backend",
   "version": "0.0.1",
-  "description": "DCA strategy app",
+  "description": "DCA strategy backend",
   "main": "index.js",
   "type": "module",
   "scripts": {
