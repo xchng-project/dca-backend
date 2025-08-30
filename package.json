@@ -1,6 +1,6 @@
 {
   "name": "dca-backend",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "DCA strategy backend",
   "main": "index.js",
   "type": "module",
@@ -8,15 +8,23 @@
     "build": "npx tsc",
     "dev": "nodemon --exec \"node --loader ts-node/esm\" src/index.ts",
     "start": "node dist/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "typechain": "typechain --target ethers-v6 --out-dir ./src/utils/typechain ./src/utils/abi/*.json"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@typechain/ethers-v6": "^0.5.1",
     "@types/node": "^24.3.0",
     "nodemon": "^3.1.10",
     "ts-node": "^10.9.2",
+    "typechain": "^8.3.2",
     "typescript": "^5.9.2"
+  },
+  "dependencies": {
+    "@uniswap/sdk-core": "^7.7.2",
+    "@uniswap/v3-sdk": "^3.25.2",
+    "ethers": "^6.15.0"
   }
 }
